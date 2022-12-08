@@ -1,5 +1,19 @@
-
+import os
 from datetime import date as Date
+from datetime import datetime
+
+'''
+The codes for time and date depend on the format of the time or date value. Here are some examples:
+
+%Y: year as a 4-digit number (e.g., 2021)
+%m: month as a 2-digit number (e.g., 01 for January)
+%d: day as a 2-digit number (e.g., 01)
+%H: hour as a 2-digit number in 24-hour format (e.g., 13 for 1:00 PM)
+%M: minute as a 2-digit number (e.g., 59)
+%S: second as a 2-digit number (e.g., 59)
+
+These codes can be used in a format string to specify how a time or date value should be formatted when it is printed. For example, the format string "%Y-%m-%d %H:%M:%S" could be used to print a date and time value as "2021-01-01 13:59:59".'''
+
 
 def calc_days(month, day, year):
     # Calculate the date object for the given date
@@ -14,6 +28,9 @@ def calc_days(month, day, year):
     # Return the number of days
     return delta.days
 
+
+os.system('cls')
+print(datetime.now().strftime("%A, %d %b %Y, kl. %X"))
 
 # Ask the user for the month, day, and year
 month = int(input("Enter the month (1-12): "))
