@@ -1,6 +1,7 @@
 import os
 from datetime import date as Date
 from datetime import datetime
+# import time
 
 '''
 The codes for time and date depend on the format of the time or date value. Here are some examples:
@@ -32,12 +33,46 @@ def calc_days(month, day, year):
 os.system('cls')
 
 print(datetime.now())                                       # print date and time - unformatted
-print(datetime.now().strftime("%A, %d %b %Y, kl. %X"))
-print(datetime.now().strftime("%A, %d %b %Y, kl. %X"))
+print(datetime.now().strftime("%A, %d %b %Y, kl. %X"))      # format Monday, 12 dec 2022, kl. 10:07:07 
+print(datetime.now().strftime("%A, %d %b %Y, kl. %X"))      # format 10:00 2022-12-12
 
 date = datetime(2022, 12, 12)
 
 print(date.strftime("%B"))
+
+
+'''
+# Start the stopwatch
+start_time = time.time()
+
+# Perform some operation that you want to measure
+while True:
+    os.system('cls')
+    
+    # Get the current time
+    current_time = time.time()
+
+    # Calculate the elapsed time
+    elapsed_time = current_time - start_time
+
+    # Check that elapsed_time is a valid value
+    if elapsed_time < 0:
+        # elapsed_time is invalid, set it to 0
+        elapsed_time = 0
+
+    # Convert elapsed_time to a time tuple
+    elapsed_time_tuple = time.localtime(elapsed_time)
+
+    # Format the elapsed time using strftime
+    elapsed_time_formatted = time.strftime("%M:%S", elapsed_time_tuple)
+
+    
+    # Print the elapsed time
+    print("Elapsed time:", elapsed_time_formatted)
+    
+    time.sleep(1)
+
+'''
 
 '''
 # Ask the user for the month, day, and year
