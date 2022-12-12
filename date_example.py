@@ -30,8 +30,16 @@ def calc_days(month, day, year):
 
 
 os.system('cls')
+
+print(datetime.now())
 print(datetime.now().strftime("%A, %d %b %Y, kl. %X"))
 
+
+date = datetime(2022, 12, 12)
+
+print(date.strftime("%B"))
+
+'''
 # Ask the user for the month, day, and year
 month = int(input("Enter the month (1-12): "))
 day = int(input("Enter the day (1-31): "))
@@ -42,3 +50,4 @@ days = calc_days(month, day, year)
 
 # Print the number of days
 print(f"The number of days between {month}/{day}/{year} and today is {days}.")
+'''
