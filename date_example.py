@@ -31,9 +31,9 @@ def calc_days(month, day, year):
 
 os.system('cls')
 
-print(datetime.now())
+print(datetime.now())                                       # print date and time - unformatted
 print(datetime.now().strftime("%A, %d %b %Y, kl. %X"))
-
+print(datetime.now().strftime("%A, %d %b %Y, kl. %X"))
 
 date = datetime(2022, 12, 12)
 
